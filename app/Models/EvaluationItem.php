@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 class EvaluationItem extends Model
 {
+    use HasFactory;
+
     protected $guarded = [];
 
     public function evaluation()

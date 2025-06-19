@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mt-4" style="min-height: 85vh;">
+<div class="container my-4" style="min-height: 85vh;">
     <div class="d-flex justify-content-between align-items-center">
         <h1>Offices</h1>
         @include('office._create-office-modal')
@@ -14,6 +14,8 @@
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
                         <h5 class="card-title">{{$office->name}}</h5>
+                        <p class="card-text">{{$office->description}}</p>
+                        <p class="card-text">Total Evaluations: <span class="text-primary fw-bold">{{number_format($office->evaluation_count)}}</span></p>
                         <p class="card-text">General Rating: <span class="text-primary fw-bold">{{number_format($office->general_rating, 2)}}</span></p>
                     </div>
                 </div>

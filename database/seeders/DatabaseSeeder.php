@@ -24,5 +24,9 @@ class DatabaseSeeder extends Seeder
             'user_name' => 'lentrix',
             'password' => bcrypt('1234'),
         ]);
+
+        $this->call(OfficeSeeder::class);
+
+
     }
 }

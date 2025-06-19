@@ -9,7 +9,10 @@ class OfficeController extends Controller
 {
     public function show(Office $office)
     {
-        return view('office.show', compact('office'));
+        $month = request()->input('month', date('n'));
+        $year = request()->input('year', date('Y'));
+
+        return view('office.show', compact('office','month', 'year'));
     }
 
     public function index()
