@@ -23,7 +23,7 @@ Route::get('login', [AuthController::class, 'loginForm'])->middleware('guest')
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', function () {
         $offices = Office::orderBy('name')->get();
-        return view('home', compact('offices'));
+        return view('office.index', compact('offices'));
     })->name('home');
 
     Route::resource('offices', OfficeController::class)->only(['show','index','store','update','destroy'])
