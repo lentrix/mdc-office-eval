@@ -17,7 +17,7 @@
                     @endforeach
 
                     <div class="mb-3">
-                        <label for="comments" class="form-label">Comment</label>
+                        <label for="comments" class="form-label">Comment/Suggestion</label>
                         <textarea name="comments" id="comments" rows="4" class="form-control" required></textarea>
                     </div>
 

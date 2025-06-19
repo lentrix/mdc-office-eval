@@ -8,6 +8,14 @@
 
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
 
+        <style>
+            .rating-item:has(.form-check-input:checked) {
+                background-color: #1e738a !important;
+                border: 1px solid #0b4498 !important;
+                color: white !important;
+                font-weight: bold !important;
+            }
+        </style>
     </head>
     <body>
 
