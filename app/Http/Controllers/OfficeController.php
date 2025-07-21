@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Evaluation;
 use App\Models\Office;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,9 @@ class OfficeController extends Controller
         $month = request()->input('month', date('n'));
         $year = request()->input('year', date('Y'));
 
-        return view('office.show', compact('office','month', 'year'));
+        $interpretation = $office->averageRating ? Evaluation::interpretation($office->averageRating) : 'No evaluations yet';
+
+        return view('office.show', compact('office','month', 'year', 'interpretation'));
     }
 
     public function index()

@@ -26,4 +26,18 @@ class Evaluation extends Model
     {
         return $this->items->avg('rating');
     }
+
+    public static function interpretation($averageScore) {
+        if ($averageScore >= 3.26) {
+            return 'Very Satisfactory';
+        } elseif ($averageScore >= 2.51) {
+            return 'Satisfactory';
+        } elseif ($averageScore >= 1.76) {
+            return 'Fair';
+        } elseif ($averageScore >= 1.0) {
+            return 'Poor';
+        } else {
+            return 'Inconclusive';
+        }
+    }
 }

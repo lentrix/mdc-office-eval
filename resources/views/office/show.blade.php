@@ -25,6 +25,8 @@
                             <h3>{{ $office->monthlyEvaluationsCount($month, $year) }}</h3>
                         </li>
                         <li class="list-group-item text-center"><strong>General Rating:</strong><h3>{{ number_format($office->generalRating, 2) }}</h3></li>
+                        <li class="list-group-item text-center"><strong>Interpretation:</strong><h5>{{ $interpretation }}</h5></li>
+
                     </ul>
                 </div>
             </div>
